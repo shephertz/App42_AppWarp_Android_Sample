@@ -1,4 +1,4 @@
-package com.App42.TicTacToe;
+package com.app42.tictactoe.appwarptictactoe;
 
 import java.io.InputStream;
 import java.util.ArrayList;

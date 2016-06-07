@@ -1,4 +1,4 @@
-package com.App42.TicTacToe;
+package com.app42.tictactoe.appwarptictactoe;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -93,9 +93,15 @@ public class MainActivity extends Activity implements  ConnectionRequestListener
 	}
 
 	@Override
-	public void onDisconnectDone(ConnectEvent arg0) {
+	public void onDisconnectDone(final ConnectEvent arg0) {
 		// TODO Auto-generated method stub
-		responseTV.setText("onDisconnectDone"+arg0.getResult());
+		runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				responseTV.setText("onDisconnectDone"+arg0.getResult());
+			}
+		});
+
 		
 	}
 
